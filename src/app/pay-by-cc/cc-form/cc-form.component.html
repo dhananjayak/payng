@@ -1,6 +1,25 @@
 <form action="">
-    <div class="form-group">
-        <label for="cc-no">Card Number</label>
-        <input type="text" class="form-control" id="cc-no" placeholder="Credit Card Number">
-      </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="form-group">
+                <label for="cc-no">Card Number</label>
+                <input type="text" class="form-control" id="cc-no" placeholder="Credit Card Number">
+            </div>        
+        </div>   
+    </div>
+    <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cc-mm">Expiration Month</label>
+                    <select id="cc-mm" class="form-control">
+                        <option *ngFor="let name of monthNames" value="{{name}}" >
+                            {{name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+        
+            </div>
+    </div>
 </form>
