@@ -10,4 +10,8 @@ export class PayDropDown
     @Input() selectLabel: string;
     @Input() label: string;
     @Input() items: any[]
+
+    select(item: any): void {
+        this.selectLabel = item;
+    }
 }
