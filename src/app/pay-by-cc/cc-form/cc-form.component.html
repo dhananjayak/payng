@@ -8,18 +8,31 @@
         </div>   
     </div>
     <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="cc-mm">Expiration Month</label>
-                    <select id="cc-mm" class="form-control">
-                        <option *ngFor="let name of monthNames" value="{{name}}" >
-                            {{name}}
-                        </option>
-                    </select>
-                </div>
+        <div class="col-md-6">
+            <label for="cc-mm">Expiration Month</label><br/>
+            <div ngbDropdown placement="top-left" class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" class="form-control" ngbDropdownToggle>Month</button>
+                <ul ngbDropdownMenu >
+                    <li ngbDropdownItem *ngFor="let name of monthNames; let i = index">{{name}}</li>
+                </ul>
             </div>
-            <div class="col-md-6">
-        
+        </div>
+        <div class="col-md-6">
+            <label for="cc-yyyy">Expiration Year</label><br/>
+            <div ngbDropdown placement="top-left" class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" class="form-control" ngbDropdownToggle>Year</button>
+                <ul ngbDropdownMenu >
+                    <li ngbDropdownItem *ngFor="let year of years;">{{year}}</li>
+                </ul>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="form-group">
+                <label for="cc-cvv">Security (or CVV) Code</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="Enter 3 or 4 digit security code">
+            </div>
+        </div>
     </div>
 </form>
