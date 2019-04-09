@@ -5,12 +5,14 @@ import { NgbButtonsModule, NgbModalModule, NgbDropdownModule } from '@ng-bootstr
 import { AppComponent } from './app.component';
 import { CreditCardModal } from 'src/app/pay-by-cc/cc-modal/cc-modal.component';
 import { CreditCardForm } from 'src/app/pay-by-cc/cc-form/cc-form.component';
+import { PayDropDown } from 'src/app/shared/pay-dropdown/pay-dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreditCardModal,
-    CreditCardForm
+    CreditCardForm,
+    PayDropDown
   ],
   imports: [
     BrowserModule,

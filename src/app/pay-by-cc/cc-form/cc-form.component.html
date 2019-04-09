@@ -9,22 +9,10 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <label for="cc-mm">Expiration Month</label><br/>
-            <div ngbDropdown placement="top-left" class="d-inline-block">
-                <button type="button" class="btn btn-outline-primary" class="form-control" ngbDropdownToggle>Month</button>
-                <ul ngbDropdownMenu >
-                    <li ngbDropdownItem *ngFor="let name of monthNames; let i = index">{{name}}</li>
-                </ul>
-            </div>
+            <pay-dropdown [label]="'Expiration Month'" [selectLabel]="'Month'" [items]="monthNames"></pay-dropdown>
         </div>
         <div class="col-md-6">
-            <label for="cc-yyyy">Expiration Year</label><br/>
-            <div ngbDropdown placement="top-left" class="d-inline-block">
-                <button type="button" class="btn btn-outline-primary" class="form-control" ngbDropdownToggle>Year</button>
-                <ul ngbDropdownMenu >
-                    <li ngbDropdownItem *ngFor="let year of years;">{{year}}</li>
-                </ul>
-            </div>
+            <pay-dropdown [label]="'Expiration Year'" [selectLabel]="'Year'" [items]="years" ></pay-dropdown>
         </div>
     </div>
     <div class="row">
