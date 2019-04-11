@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgbButtonsModule, NgbModalModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -18,7 +19,8 @@ import { PayDropDown } from 'src/app/shared/pay-dropdown/pay-dropdown.component'
     BrowserModule,
     NgbButtonsModule,
     NgbModalModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    ReactiveFormsModule
   ],
   providers: [],
   entryComponents: [CreditCardModal],

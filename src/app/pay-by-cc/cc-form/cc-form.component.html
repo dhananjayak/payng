@@ -1,9 +1,9 @@
-<form action="">
+<form [formGroup]="ccform">
     <div class="row">
         <div class="col-md-10">
             <div class="form-group">
                 <label for="cc-no">Card Number</label>
-                <input type="text" class="form-control" id="cc-no" placeholder="Credit Card Number">
+                <input type="text" formControlName="number" class="form-control" id="cc-no" placeholder="Credit Card Number">
             </div>        
         </div>   
     </div>
