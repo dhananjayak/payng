@@ -7,7 +7,12 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     templateUrl: 'cc-modal.component.html'
 })
 export class CreditCardModal {
+    disableOk : boolean = true;
     constructor(public activeModal: NgbActiveModal){
 
+    }
+
+    enableOkBtn(enable: boolean): void {
+        this.disableOk = !enable;
     }
 }
